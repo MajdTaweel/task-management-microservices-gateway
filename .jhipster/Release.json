@@ -1,0 +1,44 @@
+{
+  "name": "Release",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "3",
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ReleaseStatus",
+      "fieldValues": "NEW,IN_PROGRESS,DONE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deadline",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "tasks",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200823142427",
+  "entityTableName": "release",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway"],
+  "microserviceName": "releaseService"
+}
