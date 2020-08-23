@@ -8,7 +8,7 @@ export interface ITask {
   description?: string;
   deadline?: Moment;
   releaseId?: string;
-  assignees?: string;
+  assignees?: Set<string>;
 }
 
 export class Task implements ITask {
@@ -19,6 +19,6 @@ export class Task implements ITask {
     public description?: string,
     public deadline?: Moment,
     public releaseId?: string,
-    public assignees?: string
+    public assignees?: Set<string>
   ) {}
 }

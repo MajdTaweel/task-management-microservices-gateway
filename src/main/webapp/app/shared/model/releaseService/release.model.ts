@@ -7,16 +7,8 @@ export interface IRelease {
   type?: string;
   status?: ReleaseStatus;
   deadline?: Moment;
-  tasks?: string;
 }
 
 export class Release implements IRelease {
-  constructor(
-    public id?: string,
-    public title?: string,
-    public type?: string,
-    public status?: ReleaseStatus,
-    public deadline?: Moment,
-    public tasks?: string
-  ) {}
+  constructor(public id?: string, public title?: string, public type?: string, public status?: ReleaseStatus, public deadline?: Moment) {}
 }

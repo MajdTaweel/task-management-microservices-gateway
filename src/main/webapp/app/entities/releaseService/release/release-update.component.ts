@@ -23,7 +23,6 @@ export class ReleaseUpdateComponent implements OnInit {
     type: [null, [Validators.required]],
     status: [null, [Validators.required]],
     deadline: [],
-    tasks: [],
   });
 
   constructor(protected releaseService: ReleaseService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -46,7 +45,6 @@ export class ReleaseUpdateComponent implements OnInit {
       type: release.type,
       status: release.status,
       deadline: release.deadline ? release.deadline.format(DATE_TIME_FORMAT) : null,
-      tasks: release.tasks,
     });
   }
 
@@ -72,7 +70,6 @@ export class ReleaseUpdateComponent implements OnInit {
       type: this.editForm.get(['type'])!.value,
       status: this.editForm.get(['status'])!.value,
       deadline: this.editForm.get(['deadline'])!.value ? moment(this.editForm.get(['deadline'])!.value, DATE_TIME_FORMAT) : undefined,
-      tasks: this.editForm.get(['tasks'])!.value,
     };
   }
 

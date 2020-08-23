@@ -40,7 +40,7 @@
                     <td>{{ task.description }}</td>
                     <td>{{ task.deadline | date:'medium' }}</td>
                     <td>{{ task.releaseId }}</td>
-                    <td>{{ task.assignees }}</td>
+                    <td>{{ task.assignees?.toString() }}</td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"
