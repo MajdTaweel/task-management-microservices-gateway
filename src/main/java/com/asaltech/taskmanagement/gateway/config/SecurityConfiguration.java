@@ -56,6 +56,7 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
             .antMatchers("/management/info").permitAll()
             .antMatchers("/management/prometheus").permitAll()
             .antMatchers("/management/**").hasAuthority(AuthoritiesConstants.ADMIN);
+        http.csrf().disable();
     }
 
     @Bean

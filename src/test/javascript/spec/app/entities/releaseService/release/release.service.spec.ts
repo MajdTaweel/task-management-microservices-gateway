@@ -25,7 +25,7 @@ describe('Service Tests', () => {
       httpMock = injector.get(HttpTestingController);
       currentDate = moment();
 
-      elemDefault = new Release('ID', 'AAAAAAA', 'AAAAAAA', ReleaseStatus.NEW, currentDate, 'AAAAAAA');
+      elemDefault = new Release('ID', 'AAAAAAA', 'AAAAAAA', ReleaseStatus.NEW, currentDate);
     });
 
     describe('Service methods', () => {
@@ -74,7 +74,6 @@ describe('Service Tests', () => {
             type: 'BBBBBB',
             status: 'BBBBBB',
             deadline: currentDate.format(DATE_TIME_FORMAT),
-            tasks: 'BBBBBB',
           },
           elemDefault
         );
@@ -100,7 +99,6 @@ describe('Service Tests', () => {
             type: 'BBBBBB',
             status: 'BBBBBB',
             deadline: currentDate.format(DATE_TIME_FORMAT),
-            tasks: 'BBBBBB',
           },
           elemDefault
         );
